@@ -19,10 +19,13 @@ const App = () => {
   return (
     <div className=" min-h-screen flex flex-col justify-center items-center">
       {account ? (
-        <div>
-          Hello, {account.substring(0, 7)}...
-          {account.substring(account.length - 5)}
-        </div>
+        <>
+          <div>
+            Hello, {account.substring(0, 7)}...
+            {account.substring(account.length - 5)}
+          </div>
+          <button onClick={() => setAccount("")}>logout</button>
+        </>
       ) : (
         <button
           onClick={onClickMetaMask}
